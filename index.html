@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komal Thareja — Research Software Engineer | RENCI</title>
+  <meta name="description" content="Personal website of Komal Thareja, Senior Research Software Engineer at RENCI. Expertise in distributed systems, cloud computing, and scientific cyberinfrastructure.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Komal Thareja — Research Software Engineer">
+  <meta property="og:description" content="Senior Research Software Engineer at RENCI. Expertise in distributed systems, cloud computing, and scientific cyberinfrastructure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://komalthareja.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Komal Thareja — Research Software Engineer">
+  <meta name="twitter:description" content="Senior Research Software Engineer at RENCI. Expertise in distributed systems, cloud computing, and scientific cyberinfrastructure.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Komal Thareja",
+    "jobTitle": "Senior Research Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "RENCI, UNC Chapel Hill"
+    },
+    "url": "https://komalthareja.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/komalthareja/",
+      "https://github.com/kthare10",
+      "https://scholar.google.com/citations?user=yosNnw0AAAAJ&hl=en",
+      "https://orcid.org/0000-0002-8113-6967"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" class="fixed top-0 w-full bg-white/95 backdrop-blur border-b border-slate-200 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#hero" class="text-lg font-bold text-blue-600">Komal Thareja</a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#about" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">About</a>
+          <a href="#projects" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">Projects</a>
+          <a href="#publications" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">Publications</a>
+          <a href="#skills" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">Skills</a>
+          <a href="#contact" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+          <span class="w-px h-5 bg-slate-300"></span>
+          <!-- Social icons -->
+          <a href="https://www.linkedin.com/in/komalthareja/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-slate-500 hover:text-blue-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=yosNnw0AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="text-slate-500 hover:text-blue-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
+          </a>
+          <a href="https://github.com/kthare10" target="_blank" rel="noopener" aria-label="GitHub" class="text-slate-500 hover:text-blue-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://orcid.org/0000-0002-8113-6967" target="_blank" rel="noopener" aria-label="ORCID" class="text-slate-500 hover:text-blue-600 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.209-3.722-3.869-3.722h-2.45z"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-blue-600" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="#about" class="block py-2 text-sm text-slate-600 hover:text-blue-600">About</a>
+        <a href="#projects" class="block py-2 text-sm text-slate-600 hover:text-blue-600">Projects</a>
+        <a href="#publications" class="block py-2 text-sm text-slate-600 hover:text-blue-600">Publications</a>
+        <a href="#skills" class="block py-2 text-sm text-slate-600 hover:text-blue-600">Skills</a>
+        <a href="#contact" class="block py-2 text-sm text-slate-600 hover:text-blue-600">Contact</a>
+        <div class="flex gap-4 pt-3 border-t border-slate-200 mt-3">
+          <a href="https://www.linkedin.com/in/komalthareja/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-slate-500 hover:text-blue-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://scholar.google.com/citations?user=yosNnw0AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" class="text-slate-500 hover:text-blue-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg></a>
+          <a href="https://github.com/kthare10" target="_blank" rel="noopener" aria-label="GitHub" class="text-slate-500 hover:text-blue-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="https://orcid.org/0000-0002-8113-6967" target="_blank" rel="noopener" aria-label="ORCID" class="text-slate-500 hover:text-blue-600"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.209-3.722-3.869-3.722h-2.45z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="pt-28 pb-16 sm:pt-36 sm:pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <!-- Headshot placeholder -->
+        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 overflow-hidden border-4 border-blue-200">
+          <span class="text-blue-400 text-5xl font-bold">KT</span>
+        </div>
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl sm:text-5xl font-bold text-slate-900">Komal Thareja</h1>
+          <p class="mt-2 text-lg sm:text-xl text-blue-600 font-medium">Senior Research Software Engineer | Distributed Systems | Cloud & Edge Computing</p>
+          <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">
+            Research software engineer with 20+ years of experience spanning mobile communications industry and NSF-funded research infrastructure. Lead Software Architect for the <a href="https://fabric-testbed.net" target="_blank" rel="noopener" class="text-blue-600 hover:underline">FABRIC testbed</a> &mdash; a national-scale programmable network infrastructure. Building <a href="https://github.com/pegasus-isi/claude-plugin-marketplace" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Pegasus AI</a> &mdash; an AI-assisted platform for scientific workflow development. Expertise in building scalable distributed systems, cloud orchestration platforms, and scientific workflow tools.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+            <a href="#publications" class="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">View Publications</a>
+            <a href="CV_Komal_Thareja.pdf" class="inline-flex items-center px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:border-blue-400 hover:text-blue-600 transition-colors" download>Download CV</a>
+            <a href="#contact" class="inline-flex items-center px-5 py-2.5 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:border-blue-400 hover:text-blue-600 transition-colors">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">About</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Current Role</h3>
+          <p class="mt-2 text-slate-700 leading-relaxed">
+            Senior Research Software Engineer at <a href="https://renci.org" target="_blank" rel="noopener" class="text-blue-600 hover:underline">RENCI</a> (Renaissance Computing Institute), University of North Carolina at Chapel Hill. Lead Software Architect for the FABRIC testbed control framework, FABLIB Python API, and Jupyter-based experiment tools. Building Pegasus AI &mdash; an AI-assisted platform for scientific workflow development using LLM agents and Claude Code plugins.
+          </p>
+
+          <h3 class="mt-6 text-sm font-semibold text-blue-600 uppercase tracking-wide">Education</h3>
+          <ul class="mt-2 space-y-1 text-slate-700">
+            <li>M.S. Computer Science, 2025 &mdash; NC State University</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Experience Summary</h3>
+          <p class="mt-2 text-slate-700 leading-relaxed">
+            20+ years of professional experience spanning mobile communications (industry) and NSF-funded cyberinfrastructure research. Core contributor to multiple federally-funded projects including FABRIC, Pegasus AI, SWARM, FlyNet, DyNamo, ExoGENI, and COMET. Published 25 peer-reviewed papers (h-index: 5, ~75 citations).
+          </p>
+
+          <h3 class="mt-6 text-sm font-semibold text-blue-600 uppercase tracking-wide">Scholarly Metrics</h3>
+          <div class="mt-2 flex flex-wrap gap-4 text-sm text-slate-600">
+            <span class="bg-white px-3 py-1 rounded-full border border-slate-200">25 Publications</span>
+            <span class="bg-white px-3 py-1 rounded-full border border-slate-200">~75 Citations</span>
+            <span class="bg-white px-3 py-1 rounded-full border border-slate-200">h-index: 5</span>
+            <a href="https://orcid.org/0000-0002-8113-6967" target="_blank" rel="noopener" class="bg-white px-3 py-1 rounded-full border border-slate-200 hover:border-blue-400 hover:text-blue-600 transition-colors">ORCID: 0000-0002-8113-6967</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Projects</h2>
+      <p class="mt-2 text-slate-600">Key research and engineering projects</p>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- FABRIC -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">FABRIC</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">NSF-funded national-scale programmable network testbed. Lead Software Architect for control framework, FABLIB Python API, and Jupyter-based tools.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Python</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Kafka</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Docker</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Jupyter</span>
+          </div>
+          <a href="https://fabric-testbed.net" target="_blank" rel="noopener" class="inline-block mt-4 text-sm text-blue-600 hover:underline">fabric-testbed.net &rarr;</a>
+        </div>
+
+        <!-- PegasusAI -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">Pegasus AI</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">AI-assisted scientific workflow development platform &mdash; agentic coding assistant and Claude Code plugin suite for building, converting, reviewing, and debugging Pegasus WMS workflows. Includes Kiso experiment management for edge-to-cloud deployment across Chameleon, FABRIC, and Vagrant.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Python</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">LLM Agents</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Pegasus WMS</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">MCP</span>
+          </div>
+          <a href="https://github.com/pegasus-isi/claude-plugin-marketplace" target="_blank" rel="noopener" class="inline-block mt-4 text-sm text-blue-600 hover:underline">GitHub &rarr;</a>
+        </div>
+
+        <!-- SWARM -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">SWARM / SWARM+</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Scientific Workflow Applications on Resilient Metasystem &mdash; fully-decentralized workload management using multi-agent consensus.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Distributed Systems</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Multi-Agent</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Consensus</span>
+          </div>
+        </div>
+
+        <!-- FlyNet -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">FlyNet / FlyPaw</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Edge-to-cloud platform for scientific workflows supporting UAV applications, automated resource allocation, and network services management.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Edge Computing</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">UAV</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Pegasus</span>
+          </div>
+        </div>
+
+        <!-- DyNamo -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">DyNamo</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Dynamic Network-Centric Multi-cloud Platform for real-time and data-intensive science workflows with adaptive weather sensing.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Multi-Cloud</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">SDN</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Weather</span>
+          </div>
+        </div>
+
+        <!-- ExoGENI -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">ExoGENI</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Federated cloud/network testbed &mdash; contributed to cloud orchestration and infrastructure provisioning.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Cloud</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">IaaS</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Federation</span>
+          </div>
+        </div>
+
+        <!-- COMET -->
+        <div class="border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            <h3 class="font-semibold text-slate-900">COMET</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Distributed Metadata Service for federated cloud infrastructures and multi-cloud experiments.</p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Metadata</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Federation</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">REST API</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Publications</h2>
+      <p class="mt-2 text-slate-600">25 peer-reviewed papers &middot; ~75 citations &middot; h-index: 5</p>
+
+      <!-- Year: 2026 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2026</h3>
+      <ol class="mt-4 space-y-6 list-none" start="1">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Decentralized Coordination of Autonomous Agents in the Compute Continuum Using Consensus</p>
+          <p class="mt-1 text-sm text-slate-600">Xavier Casas-Moreno, <strong class="text-blue-600">Komal Thareja</strong>, Pablo de Juan Vela, Rajiv Mayani, Josep Fanals-i-Batllori, Anirban Mandal, Ewa Deelman, Rosa M. Badia, Francesc Lordan</p>
+          <p class="mt-1 text-sm text-slate-500"><em>Frontiers in Complex Systems</em>, 2026</p>
+          <a href="https://doi.org/10.3389/fcpxs.2026.1800101" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.3389/fcpxs.2026.1800101</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">SWARM+: Scalable and Resilient Multi-Agent Consensus for Fully-Decentralized Data-Aware Workload Management</p>
+          <p class="mt-1 text-sm text-slate-600"><strong class="text-blue-600">Komal Thareja</strong>, Krishnan Raghavan, Anirban Mandal, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>arXiv preprint</em>, 2026</p>
+          <a href="https://doi.org/10.48550/arxiv.2603.19431" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.48550/arxiv.2603.19431</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">(POSTER) From Sensors to Insight: Rapid, Edge-to-Core Application Development for Sensor-Driven Applications</p>
+          <p class="mt-1 text-sm text-slate-600"><strong class="text-blue-600">Komal Thareja</strong>, Anirban Mandal, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE International Conference on Distributed Computing in Smart Systems and the IoT (DCOSS)</em>, 2026</p>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2025 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2025</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">A Glimpse of Emerging Networking and Distributed Computing Research via Experiments on the FABRIC Testbed</p>
+          <p class="mt-1 text-sm text-slate-600">Kuang-Ching Wang, Paul Ruth, James Griffioen, Anita Nikolich, Inder Monga, Zongming Fei, Yongwook Song, Mami Hayashida, Pinyi Shi, <strong class="text-blue-600">Komal Thareja</strong>, Tom Lehman, Ezra Kissel, Yatish Kumar, Xi Yang, Ilya Baldin, Benjamin Formby, Acheme Acheme</p>
+          <p class="mt-1 text-sm text-slate-500"><em>34th International Conference on Computer Communications and Networks (ICCCN)</em>, 2025</p>
+          <a href="https://doi.org/10.1109/ICCCN65249.2025.11133944" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/ICCCN65249.2025.11133944</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Ship-to-Shore Network Monitoring: The Research Vessel Sikuliaq Experience</p>
+          <p class="mt-1 text-sm text-slate-600"><strong class="text-blue-600">Komal Thareja</strong>, Anirban Mandal, Julian H. Race, Paul Ruth, Christopher G. Romsos, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE Internet Computing</em>, 2025</p>
+          <a href="https://doi.org/10.1109/MIC.2025.3615849" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/MIC.2025.3615849</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">A Greedy Consensus-Based Approach to Distributed Job Selection: Toward Fully-Decentralized Workload Management System</p>
+          <p class="mt-1 text-sm text-slate-600"><strong class="text-blue-600">Komal Thareja</strong>, Krishnan Raghavan, Anirban Mandal, Pawel Zuk, Imtiaz Mahmud, Mariam Kiran, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE 25th International Symposium on Cluster, Cloud and Internet Computing (CCGrid'25)</em>, 2025</p>
+          <a href="https://doi.org/10.1109/CCGRID64434.2025.00043" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/CCGRID64434.2025.00043</a>
+          <span class="ml-2 text-xs text-slate-400">2 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">SWARM: Reimagining Scientific Workflow Management Systems in a Distributed World</p>
+          <p class="mt-1 text-sm text-slate-600">Prasanna Balaprakash, Krishnan Raghavan, Franck Cappello, Ewa Deelman, Anirban Mandal, Hongwei Jin, Imtiaz Mahmud, <strong class="text-blue-600">Komal Thareja</strong>, Shixun Wu, Pawel Zuk, Mariam Kiran, Zizhong Chen, Sheng Di, Kesheng Wu</p>
+          <p class="mt-1 text-sm text-slate-500"><em>The International Journal of High Performance Computing Applications</em>, 2025</p>
+          <a href="https://doi.org/10.1177/10943420251339317" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1177/10943420251339317</a>
+          <span class="ml-2 text-xs text-slate-400">3 citations</span>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2024 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2024</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">FabFed: Tool-Based Network Federation for Testbed of Testbeds &mdash; Paradigm and Practice</p>
+          <p class="mt-1 text-sm text-slate-600">Xi Yang, Ezra Kissel, Abdelilah Essiari, Liang Zhang, Tom Lehman, Inder Monga, Paul Ruth, <strong class="text-blue-600">Komal Thareja</strong>, Ilya Baldin</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE INFOCOM 2024 Workshops</em>, 2024</p>
+          <a href="https://doi.org/10.1109/INFOCOMWKSHPS61880.2024.10620897" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/INFOCOMWKSHPS61880.2024.10620897</a>
+          <span class="ml-2 text-xs text-slate-400">4 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">DISTRI: Development and Integration of Simulation Tools for Resilient Infrastructure</p>
+          <p class="mt-1 text-sm text-slate-600">Imtiaz Mahmud, Pawel Zuk, Cong Wang, Mariam Kiran, Kesheng Wu, <strong class="text-blue-600">Komal Thareja</strong>, Krishnan Raghavan, Anirban Mandal, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE International Conference on Big Data (BigData)</em>, 2024</p>
+          <a href="https://doi.org/10.1109/BIGDATA62323.2024.10825783" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/BIGDATA62323.2024.10825783</a>
+          <span class="ml-2 text-xs text-slate-400">2 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">(POSTER) Network Testbed for Experimenting With Decentralized Federated Learning</p>
+          <p class="mt-1 text-sm text-slate-600">Anirban Mandal, <strong class="text-blue-600">Komal Thareja</strong>, Paul Ruth</p>
+          <p class="mt-1 text-sm text-slate-500"><em>20th International Conference on Distributed Computing in Smart Systems and the IoT (DCOSS-IoT)</em>, 2024</p>
+          <a href="https://doi.org/10.1109/DCOSS-IoT61029.2024.00119" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/DCOSS-IoT61029.2024.00119</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">FlowBench Raw Data Archive</p>
+          <p class="mt-1 text-sm text-slate-600">George Papadimitriou, Hongwei Jin, Cong Wang, Krishnan Raghavan, Imtiaz Mahmud, <strong class="text-blue-600">Komal Thareja</strong>, Pawel Zuk, Rajiv Mayani, Prasanna Balaprakash, Mariam Kiran, Anirban Mandal, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>U.S. Department of Energy OSTI</em>, 2024</p>
+          <a href="https://doi.org/10.11578/dc.20240819.1" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.11578/dc.20240819.1</a>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2023 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2023</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">FlyNet: Drones on the Horizon</p>
+          <p class="mt-1 text-sm text-slate-600">Alicia Esquivel Morel, Chengyi Qu, Prasad Calyam, Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Anirban Mandal, Eric J. Lyons, Michael Zink, George Papadimitriou, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE Internet Computing</em>, 2023</p>
+          <a href="https://doi.org/10.1109/MIC.2023.3260440" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/MIC.2023.3260440</a>
+          <span class="ml-2 text-xs text-slate-400">2 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">FlyPaw: Optimized Route Planning for Scientific UAV Missions</p>
+          <p class="mt-1 text-sm text-slate-600">Andrew Grote, Eric J. Lyons, <strong class="text-blue-600">Komal Thareja</strong>, George Papadimitriou, Ewa Deelman, Anirban Mandal, Prasad Calyam, Michael Zink</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE 19th International Conference on e-Science</em>, 2023</p>
+          <a href="https://doi.org/10.1109/e-Science58273.2023.10254831" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/e-Science58273.2023.10254831</a>
+          <span class="ml-2 text-xs text-slate-400">5 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Network Services Management using Programmable Data Planes for Visual Cloud Computing</p>
+          <p class="mt-1 text-sm text-slate-600">Alicia Esquivel Morel, Prasad Calyam, Chengyi Qu, Durbek Gafurov, Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Anirban Mandal, Eric J. Lyons, Michael Zink, George Papadimitriou, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>International Conference on Computing, Networking and Communications (ICNC)</em>, 2023</p>
+          <a href="https://doi.org/10.1109/ICNC57223.2023.10074183" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/ICNC57223.2023.10074183</a>
+          <span class="ml-2 text-xs text-slate-400">7 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Experiments on Network Services for Video Transmission using FABRIC Instrument Resources</p>
+          <p class="mt-1 text-sm text-slate-600">Alicia Esquivel Morel, Durbek Gafurov, Prasad Calyam, Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Anirban Mandal, Eric J. Lyons, Michael Zink, George Papadimitriou, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE INFOCOM 2023 Workshops</em>, 2023</p>
+          <a href="https://doi.org/10.1109/INFOCOMWKSHPS57453.2023.10225817" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/INFOCOMWKSHPS57453.2023.10225817</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Graph Neural Networks for Detecting Anomalies in Scientific Workflows</p>
+          <p class="mt-1 text-sm text-slate-600">Hongwei Jin, Krishnan Raghavan, George Papadimitriou, Cong Wang, Anirban Mandal, Mariam Kiran, Ewa Deelman, Prasanna Balaprakash</p>
+          <p class="mt-1 text-sm text-slate-500"><em>The International Journal of High Performance Computing Applications</em>, 37(3&ndash;4), 394&ndash;411, 2023</p>
+          <a href="https://doi.org/10.1177/10943420231172140" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1177/10943420231172140</a>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Dynamic Network-Centric Multi-cloud Platform for Real-Time and Data-Intensive Science Workflows</p>
+          <p class="mt-1 text-sm text-slate-600"><strong class="text-blue-600">Komal Thareja</strong> et al.</p>
+          <p class="mt-1 text-sm text-slate-500"><em>Springer Lecture Notes in Computer Science</em>, 2023</p>
+          <a href="https://doi.org/10.1007/978-3-031-27986-7_32" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1007/978-3-031-27986-7_32</a>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2022 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2022</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">FABRIC Network Service Model</p>
+          <p class="mt-1 text-sm text-slate-600">Paul Ruth, Ilya Baldin, <strong class="text-blue-600">Komal Thareja</strong>, Tom Lehman, Xi Yang, Ezra Kissel</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IFIP Networking Conference</em>, 2022</p>
+          <a href="https://doi.org/10.23919/IFIPNetworking55013.2022.9829810" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.23919/IFIPNetworking55013.2022.9829810</a>
+          <span class="ml-2 text-xs text-slate-400">9 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Automating Edge-to-Cloud Workflows for Science: Traversing the Edge-to-Cloud Continuum with Pegasus</p>
+          <p class="mt-1 text-sm text-slate-600">Ryan Tanaka, George Papadimitriou, Sudarshan Viswanath, Cong Wang, Eric J. Lyons, <strong class="text-blue-600">Komal Thareja</strong>, Chengyi Qu, Alicia Esquivel Morel, Ewa Deelman, Anirban Mandal, Prasad Calyam, Michael Zink</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid)</em>, 2022</p>
+          <a href="https://doi.org/10.1109/CCGrid54584.2022.00098" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/CCGrid54584.2022.00098</a>
+          <span class="ml-2 text-xs text-slate-400">14 citations</span>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2021 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2021</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Fair Sharing of Network Resources Among Workflow Ensembles</p>
+          <p class="mt-1 text-sm text-slate-600">George Papadimitriou, Eric J. Lyons, Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Ryan Tanaka, Paul Ruth, Ivan Rodero, Ewa Deelman, Michael Zink, Anirban Mandal</p>
+          <p class="mt-1 text-sm text-slate-500"><em>Cluster Computing</em>, 2021</p>
+          <a href="https://doi.org/10.1007/s10586-021-03457-3" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1007/s10586-021-03457-3</a>
+          <span class="ml-2 text-xs text-slate-400">1 citation</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">FlyNet: A Platform to Support Scientific Workflows from the Edge to the Core for UAV Applications</p>
+          <p class="mt-1 text-sm text-slate-600">Eric J. Lyons, Hakan Saplakoglu, Michael Zink, <strong class="text-blue-600">Komal Thareja</strong>, Anirban Mandal, Chengyi Qu, Songjie Wang, Prasad Calyam, George Papadimitriou, Ryan Tanaka, Ewa Deelman</p>
+          <p class="mt-1 text-sm text-slate-500"><em>International Conference on Utility and Cloud Computing (UCC)</em>, 2021</p>
+          <a href="https://doi.org/10.1145/3468737.3494098" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1145/3468737.3494098</a>
+          <span class="ml-2 text-xs text-slate-400">2 citations</span>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2020 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2020</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">An On-Demand Weather Avoidance System for Small Aircraft Flight Path Routing</p>
+          <p class="mt-1 text-sm text-slate-600">Eric J. Lyons, David L. Westbrook, Andrew Grote, George Papadimitriou, <strong class="text-blue-600">Komal Thareja</strong>, Cong Wang, Michael Zink, Ewa Deelman, Anirban Mandal, Paul Ruth</p>
+          <p class="mt-1 text-sm text-slate-500"><em>Dynamic Data Driven Application Systems (DDDAS)</em>, Springer, 2020</p>
+          <a href="https://doi.org/10.1007/978-3-030-61725-7_36" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1007/978-3-030-61725-7_36</a>
+          <span class="ml-2 text-xs text-slate-400">3 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Application Aware Software Defined Flows of Workflow Ensembles</p>
+          <p class="mt-1 text-sm text-slate-600">George Papadimitriou, Eric J. Lyons, Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Ryan Tanaka, Paul Ruth, J. J. Villalobos, Ivan Rodero, Ewa Deelman, Michael Zink, Anirban Mandal</p>
+          <p class="mt-1 text-sm text-slate-500"><em>Workshop on Innovating the Network for Data-Intensive Science (INDIS)</em>, 2020</p>
+          <a href="https://doi.org/10.1109/INDIS51933.2020.00007" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/INDIS51933.2020.00007</a>
+          <span class="ml-2 text-xs text-slate-400">1 citation</span>
+        </li>
+
+      </ol>
+
+      <!-- Year: 2019 -->
+      <h3 class="mt-10 text-lg font-semibold text-blue-600">2019</h3>
+      <ol class="mt-4 space-y-6 list-none">
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">Toward a Dynamic Network-Centric Distributed Cloud Platform for Scientific Workflows: A Case Study for Adaptive Weather Sensing</p>
+          <p class="mt-1 text-sm text-slate-600">Eric J. Lyons, Anirban Mandal, George Papadimitriou, Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Paul Ruth, J. J. Villalobos, Ivan Rodero, Ewa Deelman, Michael Zink</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE eScience</em>, 2019</p>
+          <a href="https://doi.org/10.1109/eScience.2019.00015" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/eScience.2019.00015</a>
+          <span class="ml-2 text-xs text-slate-400">19 citations</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">COMET: A Distributed Metadata Service for Federated Cloud Infrastructures</p>
+          <p class="mt-1 text-sm text-slate-600">Cong Wang, <strong class="text-blue-600">Komal Thareja</strong>, Michael Stealey, Paul Ruth, Ilya Baldin</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE Conference on High Performance Extreme Computing (HPEC)</em>, 2019</p>
+          <a href="https://doi.org/10.1109/HPEC.2019.8916536" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/HPEC.2019.8916536</a>
+          <span class="ml-2 text-xs text-slate-400">1 citation</span>
+        </li>
+
+        <li class="border-l-2 border-blue-200 pl-4">
+          <p class="font-medium text-slate-900">COMET: Distributed Metadata Service for Multi-cloud Experiments</p>
+          <p class="mt-1 text-sm text-slate-600"><strong class="text-blue-600">Komal Thareja</strong>, Cong Wang, Paul Ruth, Anirban Mandal, Ilya Baldin, Michael Stealey</p>
+          <p class="mt-1 text-sm text-slate-500"><em>IEEE International Conference on Network Protocols (ICNP)</em>, 2019</p>
+          <a href="https://doi.org/10.1109/ICNP.2019.8888138" target="_blank" rel="noopener" class="mt-1 inline-block text-sm text-blue-600 hover:underline">DOI: 10.1109/ICNP.2019.8888138</a>
+        </li>
+
+      </ol>
+
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Skills & Expertise</h2>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">Research Domains</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Distributed Systems</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Cloud Orchestration</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Edge-to-Cloud Computing</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">SDN / NFV</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Scientific Workflows</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Programmable Testbeds</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">Technologies</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Python</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Jupyter Notebooks</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Kafka</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Docker</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Database Systems</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">REST APIs</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Git / GitHub</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">Methodologies</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Agile / Scrum</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Full-cycle SDLC</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Software Architecture</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Open-Source Dev</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-3">Domains</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">NSF Cyberinfrastructure</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Mobile Communications</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">UAV / Drones</span>
+            <span class="text-sm bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Weather & Climate</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Contact</h2>
+      <div class="mt-6 grid sm:grid-cols-3 gap-6">
+
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <div>
+            <p class="text-sm font-medium text-slate-900">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/komalthareja/" target="_blank" rel="noopener" class="text-sm text-blue-600 hover:underline">linkedin.com/in/komalthareja</a>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div>
+            <p class="text-sm font-medium text-slate-900">Location</p>
+            <p class="text-sm text-slate-600">Chapel Hill, NC</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-8 border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-500">&copy; 2025 Komal Thareja. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/komalthareja/" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:text-blue-600 transition-colors">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=yosNnw0AAAAJ&hl=en" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:text-blue-600 transition-colors">Google Scholar</a>
+          <a href="https://github.com/kthare10" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:text-blue-600 transition-colors">GitHub</a>
+          <a href="https://www.researchgate.net/scientific-contributions/Komal-Thareja-2166002554" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:text-blue-600 transition-colors">ResearchGate</a>
+          <a href="https://orcid.org/0000-0002-8113-6967" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:text-blue-600 transition-colors">ORCID</a>
+          <a href="https://renci.org/staff/komal-thareja/" target="_blank" rel="noopener" class="text-sm text-slate-500 hover:text-blue-600 transition-colors">RENCI</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Active nav highlighting on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        if (scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('text-blue-700', 'font-medium');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('text-blue-700', 'font-medium');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
