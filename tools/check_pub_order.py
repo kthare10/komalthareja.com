@@ -40,8 +40,10 @@ def main(path):
 
     errors = []
     years = []
+    checked = 0
     for m in re.finditer(r'<h3[^>]*>\s*(\d{4})\s*</h3>(.*?)</ol>', section, re.S):
         year, body = m.group(1), m.group(2)
+        checked += len(re.findall(r"<li[\s>]", body))
         entries = []
         for li in re.finditer(r"<li(?P<attrs>[^>]*)>(?P<body>.*?)</li>", body, re.S):
             d = re.search(r'data-date="(\d{4}-\d{2}-\d{2})"', li.group("attrs"))
@@ -66,6 +68,12 @@ def main(path):
         if [e["title"] for e in entries] != [e["title"] for e in expected]:
             errors.append(f"[{year}] out of order. Expected:")
             errors += [f"    {e['date']}  {'*' if e['first'] else ' '} {e['title']}" for e in expected]
+
+    # Catch entries outside any "<h3>YYYY</h3> ... </ol>" group, which the loop above never sees.
+    total = len(re.findall(r"<li[\s>]", section))
+    if total != checked:
+        errors.append(f"{total - checked} publication <li> entries are not inside a year group "
+                      f"(found {total}, checked {checked})")
 
     if years != sorted(years, reverse=True):
         errors.append(f"Year groups not newest-first: {years}")
